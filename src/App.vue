@@ -5,7 +5,8 @@
     <h1>Minha Aplicação Vue</h1>
     <nav>
       <router-link to="/products">Produtos</router-link><br>
-      <router-link to="/home">Home</router-link>
+      <router-link to="/home">Home</router-link> <br>
+       <router-link to="/painel">Painel ADM</router-link>
     </nav>
     <main>
       <router-view></router-view>
