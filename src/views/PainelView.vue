@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Painel ADM</h2>
-    <button @click="showMessage">Mostrar Mensagem</button>
+    <button class="btn btn-success" @click="showMessage">Mostrar Mensagem</button>
     <p v-if="showMessageFlag">{{ message }}</p>
   </div>
 </template>

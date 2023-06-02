@@ -1,6 +1,6 @@
 <template>
     <div>
-      <button @click="changeColor">Mudar Cor</button>
+      <button class="btn btn-primary" @click="changeColor">Mudar Cor</button>
       <p :style="{ color: textColor }">Texto com cor alterada</p>
     </div>
   </template>
