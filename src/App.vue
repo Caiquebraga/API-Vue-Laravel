@@ -1,27 +1,33 @@
 <template>
-  <div>
+<div>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#">
         <img alt="Vue logo" src="./assets/logo.png" width="30" height="30" class="d-inline-block align-top">
-        Minha Aplicação Vue
+      Aplication Vue
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto justify-content-end">
           <li class="nav-item">
-            <router-link to="/products" class="nav-link">Produtos</router-link>
+            <router-link to="/products" class="nav-link">Sobre</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/home" class="nav-link">Home</router-link>
+            <router-link to="/home" class="nav-link">Por que usar Vuejs?</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/painel" class="nav-link">Painel ADM</router-link>
+            <router-link to="/painel" class="nav-link">Documentação</router-link>
           </li>
         </ul>
       </div>
     </nav>
+
+    <div>
+      <WellcomeMyVue></WellcomeMyVue>
+    </div>
+
     <main>
       <router-view></router-view>
     </main>
@@ -29,9 +35,14 @@
 </template>
 
 <script>
+
+import WellcomeMyVue from './components/WellcomeMy.vue'
+
 export default {
   name: 'App',
-  components: {},
+  components: {
+    WellcomeMyVue
+  },
   data() {
     return {}
   },
@@ -46,7 +57,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  
 }
 
 .navbar-brand {
