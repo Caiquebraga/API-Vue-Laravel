@@ -1,75 +1,71 @@
 <template>
-<div>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">
-        <img alt="Vue logo" src="./assets/logo.png" width="30" height="30" class="d-inline-block align-top">
-      Aplication Vue
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto justify-content-end">
-          <li class="nav-item">
-            <router-link to="/products" class="nav-link">Sobre</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link to="/home" class="nav-link">Por que usar Vuejs?</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link to="/painel" class="nav-link">Documentação</router-link>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <div>
-      <WellcomeMyVue></WellcomeMyVue>
-    </div>
-
+  <div>
+    <NavBar></NavBar>
     <main>
       <router-view></router-view>
     </main>
+    <PoliticPrivaci></PoliticPrivaci>
+    <FooterPag></FooterPag>
   </div>
 </template>
 
 <script>
-
-import WellcomeMyVue from './components/WellcomeMy.vue'
-
+import NavBar from "./components/NavBar.vue";
+import FooterPag from "./components/FooterPag.vue";
+import PoliticPrivaci from "./components/PoliticPrivaci.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    WellcomeMyVue
+    NavBar,
+    FooterPag,
+    PoliticPrivaci,
   },
   data() {
-    return {}
+    return {
+      privacyAccepted: false,
+    };
   },
-  methods: {}
+  mounted() {
+    const privacyAccepted = localStorage.getItem("privacyAccepted");
+    if (privacyAccepted) {
+      this.privacyAccepted = true;
+    }
+  },
+  methods: {
+    acceptPrivacy() {
+      this.privacyAccepted = true;
+      localStorage.setItem("privacyAccepted", true);
+    },
+  },
 };
 </script>
 
 <style>
+.privacy-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.privacy-content {
+  background-color: #ffffff;
+  padding: 20px;
+  max-width: 400px;
+  text-align: center;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  margin-top: 20vh; /* Define o espaçamento do topo */
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  
-}
-
-.navbar-brand {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-brand img {
-  margin-right: 5px;
-}
-
-.navbar-nav .nav-link {
-  color: #fff;
 }
 </style>

@@ -6,7 +6,7 @@
           <div class="col-md-6">
             <h5>Informações de Contato</h5>
             <p>Endereço: 123 Rua Principal, Brasilia, DF</p>
-            <p>Telefone: (123) 456-7890</p>
+            <p>Telefone: +55(61) 456-7890</p>
             <p>Email: caiquebsousa@outlook.com</p>
           </div>
           <div class="col-md-6">

@@ -5,7 +5,7 @@
         Nós valorizamos sua privacidade e usamos cookies para melhorar sua
         experiência no site. Ao continuar navegando, você concorda com nossa
         <a href="/politica-de-privacidade" target="_blank"
-          >política de privacidade</a
+          >política de privacidade!</a
         >.
       </p>
       <button @click="acceptPrivacy" class="btn btn-primary">Aceitar</button>

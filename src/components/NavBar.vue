@@ -29,7 +29,7 @@
           </li>
           <li class="nav-item">
             <router-link to="/home" class="nav-link"
-              >Por que usar Vuejs?</router-link
+              >Por que usar Vue.js?</router-link
             >
           </li>
           <li class="nav-item">
