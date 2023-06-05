@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark color sticky-top">
       <a class="navbar-brand" href="/">
         <img
           alt="Vue logo"
@@ -63,4 +63,8 @@ export default {
 .navbar-nav .nav-link {
   color: #fff;
 }
+.color {
+  background-color: rgb(74, 152, 74);
+}
+
 </style>

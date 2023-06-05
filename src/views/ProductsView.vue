@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Products chegou</h2>
+    <h2>Products chegou aqui na view</h2>
     <MudaCor />
   </div>
 </template>
