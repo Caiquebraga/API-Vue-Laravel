@@ -4,6 +4,7 @@
     <main>
       <router-view></router-view>
     </main>
+    
     <PoliticPrivaci></PoliticPrivaci>
     <FooterPag></FooterPag>
   </div>
@@ -13,12 +14,14 @@
 import NavBar from "./components/NavBar.vue";
 import FooterPag from "./components/FooterPag.vue";
 import PoliticPrivaci from "./components/PoliticPrivaci.vue";
+
 export default {
   name: "App",
   components: {
     NavBar,
     FooterPag,
     PoliticPrivaci,
+   
   },
   data() {
     return {
