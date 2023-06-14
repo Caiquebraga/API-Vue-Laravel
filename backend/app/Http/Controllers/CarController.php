@@ -3,21 +3,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Carro;
+use App\Models\Car;
 use Illuminate\Http\Request;
 
-class CarroController extends Controller
+class CarController extends Controller
 {
     public function index()
     {
-        $carros = Carro::all();
+        $carros = Car::all();
 
         return response()->json($carros);
     }
 
     public function show($id)
     {
-        $carro = Carro::findOrFail($id);
+        $carro = Car::findOrFail($id);
 
         return response()->json($carro);
     }
@@ -26,7 +26,7 @@ class CarroController extends Controller
     {
         // Validação e criação do carro
 
-        $carro = Carro::create($request->all());
+        $carro = Car::create($request->all());
 
         return response()->json($carro, 201);
     }
@@ -35,7 +35,7 @@ class CarroController extends Controller
     {
         // Validação e atualização do carro
 
-        $carro = Carro::findOrFail($id);
+        $carro = Car::findOrFail($id);
         $carro->update($request->all());
 
         return response()->json($carro);
@@ -43,7 +43,7 @@ class CarroController extends Controller
 
     public function destroy($id)
     {
-        $carro = Carro::findOrFail($id);
+        $carro = Car::findOrFail($id);
         $carro->delete();
 
         return response()->json(null, 204);

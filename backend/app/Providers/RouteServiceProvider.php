@@ -7,7 +7,7 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CarroController;
+use App\Http\Controllers\CarController;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -42,11 +42,11 @@ class RouteServiceProvider extends ServiceProvider
             Route::prefix('api')
                 ->middleware('api')
                 ->group(function () {
-                    Route::get('/carros', [CarroController::class, 'index']);
-                    Route::get('/carros/{id}', [CarroController::class, 'show']);
-                    Route::post('/carros', [CarroController::class, 'store']);
-                    Route::put('/carros/{id}', [CarroController::class, 'update']);
-                    Route::delete('/carros/{id}', [CarroController::class, 'destroy']);
+                    Route::get('/carros', [CarController::class, 'index']);
+                    Route::get('/carros/{id}', [CarController::class, 'show']);
+                    Route::post('/carros', [CarController::class, 'store']);
+                    Route::put('/carros/{id}', [CarController::class, 'update']);
+                    Route::delete('/carros/{id}', [CarController::class, 'destroy']);
                 });
 
             Route::middleware('web')

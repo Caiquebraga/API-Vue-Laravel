@@ -1,15 +1,13 @@
 <template>
-   
   <div class="container mt-5">
     <DataApi></DataApi>
-    <div>
-
+    <!-- <div>
       <img
         src="/Vue-Blog-Cover-2.png"
         width="300"
         height="260"
         alt="Imagem de capa Vue JS" />
-    </div>
+    </div> -->
   </div>
 </template>
 
