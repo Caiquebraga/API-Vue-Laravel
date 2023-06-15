@@ -44,6 +44,7 @@ export default {
 </script>
 
 <style>
+
 .privacy-popup {
   position: fixed;
   top: 0;

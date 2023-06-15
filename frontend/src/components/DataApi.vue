@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h1>API de carros</h1>
+    <h1>API de carros Com Vue e Laravel</h1>
     <button class="btn btn-primary" @click="openModalAddCarro">Adicionar Carro</button>
     <!-- Exibir os detalhes dos carros -->
-    <div v-for="carro in carros" :key="carro.id" class="row">
+    <div v-for="carro in carros" :key="carro.id" class="row carro-item mt-5">
       <div class="col-md-4">
         <ul class="list-group">
           <li class="list-group-item bg-primary text-white"><strong>Marca:</strong></li>
@@ -269,5 +269,8 @@ export default {
 
 button {
   margin-top: 10px;
+}
+.carro-item {
+  margin-bottom: 20px;
 }
 </style>
